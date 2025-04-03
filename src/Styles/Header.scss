@@ -1,0 +1,46 @@
+.container {
+    display: flex;  
+    align-items: center;       
+    justify-content: space-between;
+    padding: 0px 20px;
+    background-color:rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    width: 97%;
+    margin: 3px;
+    height: 100px;
+    backdrop-filter: blur(4px);
+    position: static;  
+    top: unset;
+
+  }
+  
+  .logo h3,
+  .hd-puncts h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 5;
+    vertical-align: middle;
+  }
+  
+  
+  .hd-puncts {
+    display: flex;
+    gap: 20px;                
+  }
+  
+  .hd-puncts h3 {
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .search input {
+    // padding: 5px 10px;
+    height: 36px;
+    border-radius: 20px;
+
+  }
+  
+.search {
+  display: flex;
+  gap: 40px;
+}

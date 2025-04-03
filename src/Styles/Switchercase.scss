@@ -1,0 +1,22 @@
+.switcher {
+   
+    width: 128px;
+    height: 37px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.switch {
+
+    .slider {
+        width: 37px;
+        height: 37px;
+        background-color: black;
+        border-radius: 50%;
+    
+    }
+    .option {
+        z-index: 2;
+        font-size: 18px;
+    }
+}
