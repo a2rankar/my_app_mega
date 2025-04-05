@@ -14,7 +14,7 @@ function Header() {
                 <h3>Главная</h3>
             </div>
             <div className="search">
-                <input/>
+                <input type="text" placeholder="vndfj"/>
                 <Switcher/>
             </div>
 

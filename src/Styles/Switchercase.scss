@@ -1,22 +1,49 @@
 .switcher {
-   
+    position: relative;
     width: 128px;
     height: 37px;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
     border-radius: 20px;
-}
-
-.switch {
-
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .inner-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 8px;
+    position: relative;
+  
     .slider {
-        width: 37px;
-        height: 37px;
-        background-color: black;
-        border-radius: 50%;
-    
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 37px;
+      height: 37px;
+      background-color: black;
+      border-radius: 50%;
+      transition: left 0.3s ease;
+      z-index: 1 ;
     }
-    .option {
-        z-index: 2;
-        font-size: 18px;
+  
+    &.en .slider {
+      left: 94px;
     }
-}
+  
+    &.ru .slider {
+      left: 0;
+    }
+  
+    .desc {
+      z-index: 2;
+      font-size: 18px;
+      flex: 1;
+      text-align: center;
+      color: #333;
+      user-select: none;
+    }
+  }
+  

@@ -6,12 +6,14 @@ import Tours from './src/pages/Tours'
 import ToursDetail from './src/pages/toursDetail';
 import Profile from './src/pages/Profile';
 import './App.css'
+import Switcher from './src/components/Switcher';
 import React from 'react';
 
 function App() {
   return (
-
+    
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
