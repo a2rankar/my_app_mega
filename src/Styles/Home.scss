@@ -1,13 +1,23 @@
 .cont {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
     height: 100vh;
     background-image: url('../assets/burana.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-   z-index: -1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .content {
+    background-color: #fff;
+    padding: 40px 20px;
+    color: #0c0404;
+  }
+  
+  .card-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
   }
   

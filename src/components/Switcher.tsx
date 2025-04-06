@@ -7,7 +7,6 @@ const Switcher = () => {
         const updLang = lang === 'ru' ? 'en' : 'ru';
         setLang(updLang);
         console.log("Switched to: ", updLang);
-        console.log("CURRENT LANG:", lang);
 
     };
         return (
@@ -16,7 +15,7 @@ const Switcher = () => {
                     <div className="desc">ru</div>
                     <div className="desc">en</div>
                     <div className="slider" />
-                    <p>{lang}123</p>
+            
                 </div>
           </div>
           
