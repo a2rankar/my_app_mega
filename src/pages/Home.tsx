@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import React from 'react';
 import "../Styles/Home.scss";
 import Header from '../components/Header';
-import Card from '../components/card';
+import Card from '../components/Cards/Card';
 
 function Home() {
   return (
@@ -13,10 +13,17 @@ function Home() {
       </div>
 
       <div className='content'>
-        <h2>The best tours</h2>
-        <h2>One day tours</h2>
+        <div className='content-page'>
+          <h2>The best tours</h2>
+          <h2>One day tours</h2>
+        </div>
         <div className='card-page'>
-          <Card />
+        <Card /> 
+        <Card />
+        <Card />
+        <Card />
+        <Card />
+        <Card />
         </div>
       </div>
   

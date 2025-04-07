@@ -7,13 +7,13 @@ import ToursDetail from './src/pages/toursDetail';
 import Profile from './src/pages/Profile';
 import './App.css'
 import Switcher from './src/components/Switcher';
+import Card from './src/components/Cards/Card';
 import React from 'react';
 
 function App() {
   return (
-    
       <Routes>
-
+        <Route path='/card' element={<Card />}/>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />

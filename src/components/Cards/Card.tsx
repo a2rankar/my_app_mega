@@ -1,9 +1,12 @@
 import React from "react";
-import image2 from '../assets/image2.svg';
+
+import image2 from '../../assets/image2.svg';
+
+import styles from './Card.module.scss';
 
 function Card () {
     return (
-        <div className="container">
+        <div className={styles.container}>
             <img src={image2} alt="logo"/>
             <h2>Jety-Ogyz</h2>
             <h3>vsvds</h3>

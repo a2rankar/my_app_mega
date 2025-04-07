@@ -13,7 +13,7 @@
     top: unset;
 
   }
-  
+
   .logo h3,
   .hd-puncts h3 {
     margin: 0;
@@ -34,8 +34,15 @@
   }
   
   .search input {
-    // padding: 5px 10px;
-    height: 36px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    width: 128px;
+    height: 37px;
+    border-radius: 20px;
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 2;
     border-radius: 20px;
 
   }
