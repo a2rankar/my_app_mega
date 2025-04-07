@@ -4,16 +4,16 @@ import { useState, useEffect } from 'react'
 type UserProfile = {
   name: string
   email: string
-  age?: number // необязательное поле
+  age?: number 
 }
 
 function Profile() {
   const [user, setUser] = useState<UserProfile | null>(null)
 
   useEffect(() => {
-    // Симуляция загрузки данных пользователя
+   
     const fetchUser = async () => {
-      // Здесь могла бы быть ваша реклама... то есть API-запрос
+    
       const mockUser: UserProfile = {
         name: 'Айбек Беков',
         email: 'aibek@example.com',

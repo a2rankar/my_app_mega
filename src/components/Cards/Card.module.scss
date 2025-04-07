@@ -6,3 +6,16 @@
     height: 437px;
   }
   
+  .first_row {
+    display: flex;
+
+    justify-content: space-between;
+  }
+.description {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+.description p {
+  margin: 0;
+}
