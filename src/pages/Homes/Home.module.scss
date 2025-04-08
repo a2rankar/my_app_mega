@@ -1,6 +1,6 @@
 .cont {
     height: 100vh;
-    background-image: url('../assets/burana.png');
+    background-image: url('../../assets/burana.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,22 +9,36 @@
   }
   
   .content {
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
-    // padding: 40px 20px;
     color: #0c0404;
     justify-content: center;
     align-items: center;
-    text-align: center;
   }
 
-  .content-page {
+  .content_page {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid red;
+    width: 456px;
+    gap: 10px;
+    padding: 30px 29px; 
   }
   
-  .card-page {
+  .content_page p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .card_page {
     width: 90%;
     display: flex;
     flex-wrap: wrap;
@@ -32,5 +46,8 @@
     margin-top: 20px;
     justify-content: center;
     align-items: center;
+  }
+  .content_page .first {
+    background-color: #0c0404;
   }
   

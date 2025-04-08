@@ -12,8 +12,15 @@
     flex-direction: column;
     margin: 0;
   }
+  .first_row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    
+  }
 
   .paragraf {
     text-align: left;
+    font-size: 16px;
   }
 }
