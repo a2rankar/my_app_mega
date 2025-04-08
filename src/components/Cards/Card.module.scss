@@ -1,21 +1,19 @@
-.container {
-    border: 1px solid #ddd;
-    padding: 20px;
-    text-align: center;
-    width: 308px;
-    height: 437px;
-  }
-  
-  .first_row {
-    display: flex;
-
-    justify-content: space-between;
-  }
-.description {
-  display: flex;
-  gap: 5px;
-  flex-direction: column;
-}
-.description p {
+* {
   margin: 0;
+}
+.container {
+  border: 1px solid #ddd;
+  text-align: center;
+  width: 308px;
+  height: 437px;
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .paragraf {
+    text-align: left;
+  }
 }

@@ -18,12 +18,12 @@ function Home() {
           <h2>One day tours</h2>
         </div>
         <div className='card-page'>
-        <Card /> 
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+          <Card /> 
+          <Card />
+          <Card />
+          <Card />
+          <Card />
+          <Card />
         </div>
       </div>
   

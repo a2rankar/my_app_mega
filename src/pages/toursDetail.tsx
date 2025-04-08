@@ -14,9 +14,9 @@ function ToursDetail() {
   const [tour, setTour] = useState<Tour | null>(null)
 
   useEffect(() => {
-    // Пример получения данных (заглушка)
+    
     const fetchTour = async () => {
-      // В реальности тут был бы fetch/axios запрос
+    
       const mockTour: Tour = {
         id: id || '',
         title: 'Поездка в горы',
