@@ -6,6 +6,7 @@
   text-align: center;
   width: 308px;
   height: 437px;
+  border: none;
 
   .description {
     display: flex;
@@ -22,5 +23,6 @@
   .paragraf {
     text-align: left;
     font-size: 16px;
+    padding-top: 5px;
   }
 }

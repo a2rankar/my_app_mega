@@ -3,6 +3,7 @@ import React from 'react';
 import styles from './Home.module.scss'
 import Header from '../../components/Header'
 import Card from '../../components/Cards/Card';
+import Comment from '../../components/Comments/Comment';
 
 function Home() {
   return (
@@ -23,6 +24,8 @@ function Home() {
               <Card />
               <Card />
             </div>
+            <button><p>Watch all tours</p></button>
+            <Comment/>
       </div>
     </>
   )
