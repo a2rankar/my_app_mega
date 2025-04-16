@@ -23,9 +23,11 @@ function Home() {
               <Card />
               <Card />
               <Card />
+
             </div>
             <button><p>Watch all tours</p></button>
             <Comment/>
+            <button className={styles.btn_gid}><p>All gids</p></button>
       </div>
     </>
   )

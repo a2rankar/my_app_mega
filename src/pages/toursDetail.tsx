@@ -38,7 +38,7 @@ function ToursDetail() {
     <div>
       <h2>{tour.title}</h2>
       <p>{tour.description}</p>
-      <p><strong>Цена:</strong> {tour.price} сом</p>
+      <p><strong>Цена :</strong> {tour.price} сом</p>
     </div>
   )
 }

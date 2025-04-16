@@ -17,7 +17,7 @@ function Profile() {
       const mockUser: UserProfile = {
         name: 'Айбек Беков',
         email: 'aibek@example.com',
-        age: 28
+        age: 283
       }
 
       setUser(mockUser)

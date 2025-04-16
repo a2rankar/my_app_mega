@@ -5,6 +5,7 @@ import Registration from './src/pages/Registration';
 import Tours from './src/pages/Tours'
 import ToursDetail from './src/pages/toursDetail';
 import Profile from './src/pages/Profile';
+import Comment from './src/components/Comments/Comment';
 import './App.css'
 import Switcher from './src/components/Switcher';
 import Card from './src/components/Cards/Card';
@@ -14,6 +15,7 @@ function App() {
   return (
       <Routes>
         <Route path='/card' element={<Card />}/>
+        <Route path='/comment' element={<Comment />}/>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
