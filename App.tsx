@@ -5,9 +5,9 @@ import Registration from './src/pages/Registration';
 import Tours from './src/pages/Tours'
 import ToursDetail from './src/pages/toursDetail';
 import Profile from './src/pages/Profile';
-import Comment from './src/components/Comments/Comment';
+import Comment from './src/components/Gids/Gids';
 import './App.css'
-import Switcher from './src/components/Switcher';
+import Switcher from './src/components/Header/Switcher/Switcher';
 import Card from './src/components/Cards/Card';
 import React from 'react';
 

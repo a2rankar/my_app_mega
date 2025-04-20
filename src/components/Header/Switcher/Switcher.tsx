@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import '../Styles/Switchercase.scss'
+import './Switcher.scss'
 const Switcher = () => {
     const [lang, setLang] = useState<'ru' | 'en'>('ru');
 

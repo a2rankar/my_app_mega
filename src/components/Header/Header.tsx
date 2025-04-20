@@ -1,6 +1,7 @@
 import React from "react";
-import '../Styles/Header.scss'
-import Switcher from "./Switcher";
+import './Header.scss'
+import Switcher from "./Switcher/Switcher";
+import search from '../../assets/search.png';
 function Header() {
     return (
         <div className="container">
@@ -14,7 +15,11 @@ function Header() {
                 <h3>Главная</h3>
             </div>
             <div className="search">
-                <input type="text" placeholder="vndfj"/>
+                <div className="input_search">
+                    <input type="text" placeholder="vndfj"/>
+                    <img src={search} alt="logo"/>
+                </div>
+                
                 <Switcher/>
             </div>
 

@@ -34,19 +34,38 @@
   }
   
   .search input {
-    border: none;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    width: 128px;
-    height: 37px;
-    border-radius: 20px;
-    cursor: pointer;
-    z-index: 2;
-    border-radius: 20px;
+
+
 
   }
   
 .search {
   display: flex;
   gap: 40px;
+    
+
+    .input_search {
+      position: relative;
+
+      input {
+        border: none;
+        outline: none;
+        border-radius: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        width: 128px;
+        height: 37px;
+        cursor: pointer;
+        z-index: 2;
+      }
+    
+      img {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        pointer-events: none; 
+      }
+    }
 }

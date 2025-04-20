@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom'
 import React from 'react';
 import styles from './Home.module.scss'
-import Header from '../../components/Header'
+import Header from '../../components/Header/Header'
 import Card from '../../components/Cards/Card';
+import Gids from '../../components/Gids/Gids';
 import Comment from '../../components/Comments/Comment';
 
-function Home() {
+const Home = () => {
   return (
     <>
       <div className={styles.cont}>
@@ -13,8 +14,8 @@ function Home() {
       </div>
       <div className={styles.content}>
             <div className={styles.content_page}>     
-                <p>The best tours</p>       
-                <p>One day tours</p>
+                <p className={styles.left}>The best tours</p>       
+                <p className={styles.right}>One day tours</p>
             </div>    
             <div className={styles.card_page}>
               <Card /> 
@@ -25,9 +26,17 @@ function Home() {
               <Card />
 
             </div>
-            <button><p>Watch all tours</p></button>
-            <Comment/>
-            <button className={styles.btn_gid}><p>All gids</p></button>
+            <Link to=''>
+              <button><p>Watch all tours</p></button>
+            </Link>
+              <Gids/>
+              <Link to=''>
+                <button className={styles.btn_gid}><p>All gids</p></button>
+              </Link>
+              <Comment/>
+
+              
+         
       </div>
     </>
   )

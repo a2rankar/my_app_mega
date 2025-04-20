@@ -18,20 +18,40 @@
 
   .content_page {
     display: flex;
-    justify-content: center;
+    width: 456px;
     align-items: center;
     text-align: center;
     border-radius: 20px;
-    border: 1px solid red;
-    width: 456px;
-    gap: 10px;
-    padding: 30px 29px;
+    border: 1px solid #40D885;
     margin: 44px;
+    height: 60px;
 
     p {
-      text-align: center;
+      margin: 0; 
       font-weight: 600;
       font-size: 16px;
+      width: 50%; 
+      text-align: center; 
+    }
+
+    .left {
+      display: flex;
+      background-color:#40D885;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      flex: 1;
+      height: 100%;
+ 
+      color: #ffffff;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .right {
+    color: #000000;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
     }
   }
 
@@ -54,13 +74,14 @@
     font-size: 16px;
     color: white;
   }
+
   .btn_gid {
     width: 456px;
     background-color: #40D885;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     gap: 10px;
 
-    p{
+    p {
       color: #fff;
     }
   }

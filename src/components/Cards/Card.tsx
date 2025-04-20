@@ -3,7 +3,7 @@ import image2 from '../../assets/image2.svg';
 import image4 from '../../assets/image 4.svg'
 import styles from './Card.module.scss';
 
-function Card () {
+const Card = () => {
     return (
     <div className={styles.fullBlog}>
         

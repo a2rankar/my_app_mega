@@ -1,0 +1,83 @@
+.fullBlog {
+    display: flex;
+    flex-direction: column;
+    gap: 56px;
+
+    .container {
+        display: flex;
+        align-items: flex-start; 
+        margin-bottom: 20px;
+        width: 100%;
+        justify-content: center;
+        gap: 32px;
+    
+        img {
+        object-fit: cover;
+
+        }
+    }
+    
+    .blog {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: flex-start;
+    
+        p {
+        margin: 0;
+
+        padding: 10px;
+        font-weight: 600;
+        }
+    }
+    
+    .info {
+        display: flex;
+        font-size: 14px;
+        color: #555;
+
+
+        .rating {
+            display: flex;
+            padding: 10px;
+            position: relative;
+            padding-right: 25px; 
+
+            &::after {
+                content: ''; 
+                background-image: url('../../assets/star.png');
+                display: inline-block;
+                width: 24px;
+                height: 24px;            
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 6px;
+                right: 0;
+            }
+            
+            p {
+                gap: 3px;
+         
+            }
+        }
+    
+        p {
+        margin: 0;
+        }
+    }
+    
+    .com_blog {
+
+        max-width: 1063px;
+
+    
+        p {
+            width: 831px;
+        margin: 0;
+        font-weight: 400;
+        font-size: 14px;
+        color: #333;
+        }
+    }
+}    
