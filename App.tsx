@@ -11,7 +11,7 @@ import Switcher from './src/components/Header/Switcher/Switcher';
 import Card from './src/components/Cards/Card';
 import React from 'react';
 
-function App() {
+const App = () =>  {
   return (
       <Routes>
         <Route path='/card' element={<Card />}/>
