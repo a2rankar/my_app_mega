@@ -5,8 +5,10 @@ import Header from '../../components/Header/Header'
 import Card from '../../components/Cards/Card';
 import Gids from '../../components/Gids/Gids';
 import Comment from '../../components/Comments/Comment';
+import InTouch from '../../components/Connect/InTouch';
+import Footer from '../../components/Footer/Footer';
 
-const Home = () => {
+const Home: React.FC = () => {
   return (
     <>
       <div className={styles.cont}>
@@ -19,24 +21,25 @@ const Home = () => {
             </div>    
             <div className={styles.card_page}>
               <Card /> 
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-
             </div>
             <Link to=''>
               <button><p>Watch all tours</p></button>
             </Link>
+            <div className={styles.gids}>
               <Gids/>
-              <Link to=''>
-                <button className={styles.btn_gid}><p>All gids</p></button>
-              </Link>
-              <Comment/>
-
-              
-         
+            </div> 
+                <Link to=''>
+                  <button className={styles.btn_gid}><p>All gids</p></button>
+                </Link>
+                <div className={styles.comment}>
+                  <Comment/>
+                </div>
+                <div className={styles.in}>
+                  <InTouch/>
+                </div>
+                <div className='footer'>
+                  <Footer/>
+                </div>
       </div>
     </>
   )

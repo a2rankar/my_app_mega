@@ -1,0 +1,99 @@
+.container {
+    height: 309;
+    
+}
+.card {
+    display: flex;
+    align-items: center;
+    height: 309px;
+    width: 1290px;
+    justify-content: center;
+    // justify-content: space-around;
+    gap: 118px;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    margin: 37px 75px 8px 75px;
+    box-shadow: 0px 2px 8px 0px #00000033;
+    .soc_net2 {
+        display: flex;
+        align-items: center;
+        p {
+            padding: 10px;
+        }
+    }
+
+    .toLeft {
+        display: flex;
+        gap: 118px;
+        align-items: center;
+        margin-left: -90px;
+    }
+
+    .puncts {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        p{
+            padding: 10px;
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+        }
+    }
+    .soc_net {
+        display: flex;
+        gap: 44px;
+
+        flex-direction: column;
+    }
+    .logo {
+        p {
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: 0%;
+            padding: 10px;
+            border: 1px solid black;
+
+
+        }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+    }
+    .address {
+        display: flex;
+        align-items: center;
+        p {
+            padding: 10px;
+            font-family: Montserrat;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+        }
+        img {
+            width: 50px;
+            height: 45px;
+        }
+    }
+    .call {
+        display: flex;
+        align-items: center;
+            p{
+                padding: 10px;
+            }
+
+            img {
+                width: 39px;
+                height: 39px;
+            }
+    }
+}

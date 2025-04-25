@@ -2,21 +2,21 @@ import React from "react";
 import './Header.scss'
 import Switcher from "./Switcher/Switcher";
 import search from '../../assets/search.png';
-function Header() {
+const Header: React.FC = () => {
     return (
         <div className="container">
             <div className="logo">
-                <h3>LOGO</h3>
+                <p>LOGO</p>
             </div>
             <div className="hd-puncts">
-                <h3>Главная</h3>
-                <h3>Главная</h3>
-                <h3>Главная</h3>
-                <h3>Главная</h3>
+                <p>Главная</p>
+                <p>Туры</p>
+                <p>Контакты</p>
+                <p>Вход</p>
             </div>
             <div className="search">
                 <div className="input_search">
-                    <input type="text" placeholder="vndfj"/>
+                    <input type="text"/>
                     <img src={search} alt="logo"/>
                 </div>
                 

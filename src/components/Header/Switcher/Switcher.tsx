@@ -12,9 +12,7 @@ const Switcher = () => {
         return (
             <div className="switcher">
                 <div className={`inner-switch ${lang}`} onClick={toggleLang}>
-                    <div className="desc">ru</div>
-                    <div className="desc">en</div>
-                    <div className="slider" />
+                    <div className="slider">{lang ===  'ru' ? 'RU' : 'EN'}</div>
             
                 </div>
           </div>

@@ -2,9 +2,10 @@
     position: relative;
     width: 128px;
     height: 37px;
-    background-color: #fff;
     border-radius: 20px;
+    background-color: #EDEDED;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #000000;
     cursor: pointer;
     z-index: 2;
   }
@@ -14,27 +15,32 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding: 0 8px;
+    padding: 0 6px;
     position: relative;
+
   
     .slider {
       position: absolute;
-      top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 4px;
       left: 0;
-      width: 37px;
-      height: 37px;
-      background-color: black;
-      border-radius: 50%;
+      width: 40px;
+      height: 29px;
+      background-color: #FFFFFF;
+      border-radius: 20px;
       transition: left 0.3s ease;
       z-index: 1 ;
+      
     }
   
     &.en .slider {
-      left: 94px;
+      left: 83px;
     }
   
     &.ru .slider {
-      left: 0;
+      left: 5px;
     }
   
     .desc {

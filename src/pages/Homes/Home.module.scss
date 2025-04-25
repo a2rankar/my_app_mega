@@ -55,13 +55,13 @@
     }
   }
 
-  .card_page {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-  }
+  // .card_page {
+  //   display: flex;
+  //   grid-template-columns: repeat(3, 1fr);
+  //   gap: 20px;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
 
   button {
     margin: 44px;
