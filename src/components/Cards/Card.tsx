@@ -3,7 +3,18 @@ import image2 from '../../assets/image2.svg';
 import image4 from '../../assets/image 4.svg'
 import styles from './Card.module.scss';
 
-const CardData = [
+interface CardItem {
+    id: number;
+    image: string;
+    title: string;
+    rating: number;
+    duration: string;
+    price: string;
+    date: string;
+    placesLeft: number;
+  }
+
+const CardData: CardItem[] = [
     {
       id: 1,
       image: image2,
@@ -76,7 +87,7 @@ const CardData = [
   ];
   
 const Card = () => {
-    const [cards, setCards] = useState<CardData[]>([]);
+    const [cards, setCards] = useState<CardItem[]>([]);
 
     useEffect(() => {
         setCards(CardData);
@@ -95,7 +106,9 @@ const Card = () => {
                     <div className={styles.description}>
                             <div className={styles.first_row}>
                                 <p>{card.title}</p>
-                                <p>{card.rating}</p>
+                                {/* <div className={styles.rate}> */}
+                                    <p>{card.rating}</p>
+                                {/* </div> */}
                             </div>
                             <div className={styles.paragraf}> 
                                 <p>{card.duration}</p>
