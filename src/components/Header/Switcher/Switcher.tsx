@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './Switcher.scss'
+import styles from'./Switcher.module.scss'
 const Switcher = () => {
     const [lang, setLang] = useState<'ru' | 'en'>('ru');
 
@@ -10,10 +10,10 @@ const Switcher = () => {
 
     };
         return (
-            <div className="switcher">
-                <div className={`inner-switch ${lang}`} onClick={toggleLang}>
-                    <div className="slider">{lang ===  'ru' ? 'RU' : 'EN'}</div>
-            
+            <div className={styles.switcher}>
+                <div className={`${styles.inner_switch} ${styles[lang]}`}
+                onClick={toggleLang}>
+                    <div className={styles.slider}>{lang ===  'ru' ? 'RU' : 'EN'}</div>
                 </div>
           </div>
           

@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './src/pages/Homes/Home';
 import Login from './src/pages/Login';
 import Registration from './src/pages/Registration';
-import Tours from './src/pages/Tours'
+import Tours from './src/pages/Tours/Tour'
 import ToursDetail from './src/pages/toursDetail';
 import Profile from './src/pages/Profile';
 import Comment from './src/components/Gids/Gids';
@@ -14,7 +14,6 @@ import React from 'react';
 const App = () =>  {
   return (
       <Routes>
-        <Route path='/card' element={<Card />}/>
         <Route path='/comment' element={<Comment />}/>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

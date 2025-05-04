@@ -7,6 +7,7 @@ import Gids from '../../components/Gids/Gids';
 import Comment from '../../components/Comments/Comment';
 import InTouch from '../../components/Connect/InTouch';
 import Footer from '../../components/Footer/Footer';
+import { CardData } from '../../api/data/cardData'
 
 const Home: React.FC = () => {
   return (
@@ -15,16 +16,18 @@ const Home: React.FC = () => {
         <Header/>
       </div>
       <div className={styles.content}>
-            <div className={styles.content_page}>     
-                <p className={styles.left}>The best tours</p>       
-                <p className={styles.right}>One day tours</p>
-            </div>    
-            <div className={styles.card_page}>
-              <Card /> 
-            </div>
-            <Link to=''>
-              <button><p>Watch all tours</p></button>
-            </Link>
+
+              <div className={styles.content_page}>     
+                  <p className={styles.left}>The best tours</p>       
+                  <p className={styles.right}>One day tours</p>
+              </div>    
+              <div className={styles.card_page}>
+                <Card data={CardData}/> 
+              </div>
+              <Link to=''>
+                <button className={styles.tour_btn}><p>Watch all tours</p></button>
+              </Link>
+        
             <div className={styles.gids}>
               <Gids/>
             </div> 

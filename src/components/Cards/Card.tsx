@@ -1,103 +1,26 @@
 import React, { useEffect, useState } from "react";
-import image2 from '../../assets/image2.svg';
-import image4 from '../../assets/image 4.svg'
 import styles from './Card.module.scss';
+import type { CardItem } from '../../api/data/cardData'
 
-interface CardItem {
-    id: number;
-    image: string;
-    title: string;
-    rating: number;
-    duration: string;
-    price: string;
-    date: string;
-    placesLeft: number;
-  }
-
-const CardData: CardItem[] = [
-    {
-      id: 1,
-      image: image2,
-      title: "Jety-Ogyz",
-      rating: 4.7,
-      duration: "3 days",
-      price: "5000 som",
-      date: "date of out",
-      placesLeft: 63,
-    },
-    {
-      id: 2,
-      image: image4,
-      title: "Jety-Ogyz",
-      rating: 4.7,
-      duration: "31 days",
-      price: "5000 som",
-      date: "date of out",
-      placesLeft: 64,
-    },
-    {
-    id: 3,
-    image: image2,
-    title: "Jety-Ogyz",
-    rating: 4.7,
-    duration: "30 days",
-    price: "5000 som",
-    date: "date of out",
-    placesLeft: 65,
-  },
-  {
-    id: 4,
-    image: image4,
-    title: "Jety-Ogyz",
-    rating: 4.7,
-    duration: "39 days",
-    price: "5000 som",
-    date: "date of out",
-    placesLeft: 66,
-  },
-  {
-    id: 5,
-    image: image4,
-    title: "Skazka",
-    rating: 4.7,
-    duration: "39 days",
-    price: "5000 som",
-    date: "date of out",
-    placesLeft: 67,
-  },
-  {
-    id: 6,
-    image: image4,
-    title: "Jety-Ogyz",
-    rating: 4.7,
-    duration: "39 days",
-    price: "5000 som",
-    date: "date of out",
-    placesLeft: 68,
-  },{
-    id: 7,
-    image: image4,
-    title: "Jety-Ogyz",
-    rating: 4.7,
-    duration: "39 days",
-    price: "5000 som",
-    date: "date of out",
-    placesLeft: 69,
-  },
-  ];
   
-const Card = () => {
-    const [cards, setCards] = useState<CardItem[]>([]);
 
-    useEffect(() => {
-        setCards(CardData);
-    }, []); 
+    // const [cards, setCards] = useState<CardItem[]>([]);
+
+    // useEffect(() => {
+    //     setCards(CardData);
+    // }, []); 
+
+    interface CardProps {
+        data: CardItem[];
 
 
+    }
+    const Card: React.FC<CardProps> = ({data}) => {
 
+    
     return (
     <div className={styles.fullBlog}>
-            {cards.map((card) => (
+            {data.map((card) => (
                 <div className={styles.container} key={card.id}>
                     <div className={styles.imgHover}>
                         <img src={card.image} alt="logo"/>
@@ -106,9 +29,10 @@ const Card = () => {
                     <div className={styles.description}>
                             <div className={styles.first_row}>
                                 <p>{card.title}</p>
-                                {/* <div className={styles.rate}> */}
+                                <div className={styles.rate}>
                                     <p>{card.rating}</p>
-                                {/* </div> */}
+                                    <div className={styles.rating}></div>    
+                                </div>
                             </div>
                             <div className={styles.paragraf}> 
                                 <p>{card.duration}</p>
