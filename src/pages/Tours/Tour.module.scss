@@ -1,16 +1,120 @@
 .container {
     align-items: center;
-    background-color: antiquewhite;
+    background-color: #FFFFFF;
+    ;
+
+    .container_low2 {
+        display: flex;
+      
+        justify-content: center;
+        margin-top: 98px;
+    
+    }
+    .barside {
+        flex-shrink: 0;
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+        // justify-content: space-between;
+
+
+  }
+
+  .filter {
+    margin-top: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #9747FF;
+    border-radius: 5px;
+    padding: 20px;
+    gap: 15px;
+
+    
+  }
+   
+
+
   
-
-
-    .map_filter 
-    {display: flex;
-    flex-direction: column;}
+ 
+    .checkbox {
+        // padding: 20px;
+        display: flex;
+        background-color: #F7F8FA;
+        gap: 15px;
+        cursor: pointer;
+        width: 220px;
+        height: 40px;
+        border-radius: 10px;
+        text-align: start;
+        align-items: center;
+        padding-left: 10px;
+        border: none;
+    }
+    .checkbox input[type='checkbox'] {
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+      }
     .Card {
         align-items: center;
         display: flex;
-        justify-content: center;
+        margin-left: 66px;
+    }
+  .filter_btn{
+        width: 220px;
+        border: none;
+        height: 40px;
+        background-color: #E48C3F;
+        border-radius: 8px
+        ;
+        cursor: pointer;
     }
 
+}
+    .main {
+    display: flex;
+
+   
+}
+.region  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+
+}
+.arrow_img {
+    background: url('../../assets/arrow.png');
+    background-repeat: no-repeat;
+}
+
+.reset_btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.tours_map {
+    .Tours {
+        font-family: Montserrat;
+font-weight: 600;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+text-decoration: underline;
+text-decoration-style: solid;
+
+text-decoration-thickness: 0%;
+text-decoration-skip-ink: auto;
+
+    }
+    p {
+        margin-bottom: 24px;
+    }
 }

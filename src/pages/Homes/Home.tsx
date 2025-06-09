@@ -7,9 +7,10 @@ import Gids from '../../components/Gids/Gids';
 import Comment from '../../components/Comments/Comment';
 import InTouch from '../../components/Connect/InTouch';
 import Footer from '../../components/Footer/Footer';
-import { CardData } from '../../api/data/cardData'
+import { mockData, useCardData, CardItem } from '../../api/data/cardData'
 
 const Home: React.FC = () => {
+  const data = useCardData();
   return (
     <>
       <div className={styles.cont}>
@@ -22,7 +23,7 @@ const Home: React.FC = () => {
                   <p className={styles.right}>One day tours</p>
               </div>    
               <div className={styles.card_page}>
-                <Card data={CardData}/> 
+                <Card data={data}/> 
               </div>
               <Link to=''>
                 <button className={styles.tour_btn}><p>Watch all tours</p></button>

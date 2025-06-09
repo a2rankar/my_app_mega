@@ -3,7 +3,7 @@ import Home from './src/pages/Homes/Home';
 import Login from './src/pages/Login';
 import Registration from './src/pages/Registration';
 import Tours from './src/pages/Tours/Tour'
-import ToursDetail from './src/pages/toursDetail';
+import ToursDetail from './src/pages/ToursDetail/toursDetail';
 import Profile from './src/pages/Profile';
 import Comment from './src/components/Gids/Gids';
 import './App.css'
@@ -16,6 +16,7 @@ const App = () =>  {
       <Routes>
         <Route path='/comment' element={<Comment />}/>
         <Route path="/" element={<Home />} />
+        <Route path='tours/:id' element={<ToursDetail/>} />
         <Route path="/login" element={<Login />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/tours" element={<Tours />} />

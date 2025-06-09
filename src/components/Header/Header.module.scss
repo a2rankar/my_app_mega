@@ -6,7 +6,6 @@
     background-color:rgba(255, 255, 255, 0.6);
     border-radius: 20px;
     width: 100%;
-    margin: 3px;
     height: 100px;
     backdrop-filter: blur(4px);
     position: static;  
@@ -41,8 +40,8 @@
 
   .hd_puncts{
     display: flex;
-    justify-content: space-between;
-    gap: 44px;
+    justify-content: space-around;
+    gap: 83.67px;
 
 
     p{
@@ -64,11 +63,6 @@
   
 
   
-  .search input {
-
-
-
-  }
   
 .search {
   display: flex;
