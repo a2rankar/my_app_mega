@@ -23,7 +23,7 @@ import {Link} from 'react-router-dom';
                                     <div className={styles.imgHover}>
                                         <img src={card.image} alt="logo"/>
                                         <div className={styles.hoverOverlay}>
-                                            <Link to={`tours/${card.id}`} className={styles.book}>Book</Link>
+                                            <Link to={`/tours/${card.id}`} className={styles.book}>Book</Link>
                                         </div>
                                     </div>    
                                     <div className={styles.description}>

@@ -21,7 +21,7 @@ const options = [
 
 
 
-const Tours: React.FC = () => {
+const Tour: React.FC = () => {
   const data = useCardData();
   const [checkedFilters, setCheckedFilters] = useState<string[]>([]);
   const [filteredData, setFilteredData] = useState<CardItem[]>(data);
@@ -140,4 +140,4 @@ const Tours: React.FC = () => {
   );
 };
 
-export default Tours;
+export default Tour;

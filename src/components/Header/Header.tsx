@@ -2,12 +2,16 @@ import React from "react";
 import styles from './Header.module.scss'
 import Switcher from "./Switcher/Switcher";
 import search from '../../assets/search.png';
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import menu_panel from '../../assets/bi_people-circle.svg';
 
 const Header: React.FC = () => {
+
+    const location = useLocation();
+    const tourPage = location.pathname.startsWith('/tours');
+
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${tourPage ? styles.back : '' }`}>
           
             <div className={styles.hd_puncts}>
                 <div className={styles.logo}>

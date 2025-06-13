@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import image from '../../assets/image2.svg';
+import image from '../../assets/Image2.svg';
 import image2 from '../../assets/image4.svg';
 import tour_img from '../../assets/tours_image.svg';
 
@@ -34,13 +34,15 @@ export interface CardItem {
   gid: boolean;
   camp: boolean;
   tours_img: string;
+  collection_point: string;
 }
 export const mockData: CardItem[] = [
   {
     id: 1,
     image: image,
-    title: 'по горам',
+    title: 'ArslanBob',
     rating: 4.5,
+    collection_point: 'Manas str. 42',
     price: 12000,
     duration: 3,
     date: '01.07.2025',
@@ -54,6 +56,7 @@ export const mockData: CardItem[] = [
     id: 2,
     image: image2,
     title: 'Иссык-Куль',
+    collection_point: 'Manas str. 42',
     rating: 4.8,
     price: 15000,
     duration: 2,
@@ -67,6 +70,7 @@ export const mockData: CardItem[] = [
   {
     id: 3,
     image: image2,
+    collection_point: 'Manas str. 42',
     title: 'Арсланбоб',
     rating: 4.2,
     price: 18000,
@@ -87,6 +91,7 @@ export const mockData: CardItem[] = [
     camp: true,
     gid : false,
     duration: 5,
+    collection_point: 'Manas str. 42',
     date: '20.07.2025',
     place: 4,  
       level : 'easy tour',
@@ -98,6 +103,7 @@ export const mockData: CardItem[] = [
     title: ' Арсланбоб',
     rating: 4.2,
     price: 18000,
+    collection_point: 'Manas str. 42',
     duration: 5,
     date: '20.07.2025',
     place: 12,  
@@ -113,6 +119,7 @@ export const mockData: CardItem[] = [
     rating: 4.2,
     price: 18000,
     duration: 5,
+    collection_point: 'Manas str. 42',
     date: '20.07.2025',
     place: 2,  
       level : 'easy tour',
@@ -124,6 +131,7 @@ export const mockData: CardItem[] = [
     id: 7,
     image: image2,
     title: ' Арсланбоб',
+    collection_point: 'Manas str. 42',
     rating: 4.2,
     price: 18000,
     duration: 9,
@@ -140,6 +148,7 @@ export const mockData: CardItem[] = [
     image: image2,
     title: 'new',
     rating: 4.2,
+    collection_point: 'Manas str. 42',
     price: 18000,
     duration: 1 ,
     date: '20.07.2025',
@@ -158,6 +167,7 @@ export const mockData: CardItem[] = [
     duration: 1 ,
     date: '20.07.2025',
     place: 8,  
+    collection_point: 'Manas str. 42',
       level : 'difficult',
       camp: true,
       gid : false,

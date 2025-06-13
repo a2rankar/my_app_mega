@@ -1,6 +1,6 @@
 .container {
     height: 100%;
-    padding: 0px 20px 0px 20px;
+    padding: 0px 23px 0px 23px;
 
 }
 .imgHover {
@@ -16,3 +16,132 @@
         width: 100%;
     }
 }
+.calendar_loy {
+display: flex;
+flex-direction: column;
+padding: 64px;
+
+}
+.calendar {
+    width: 60%;
+    padding-top: 64px;
+
+    .btnside {
+        p{
+
+        
+        font-family: Montserrat;
+font-weight: 500;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+        }
+    }
+
+}
+    .book_btn {
+        background: #2CA261;
+        box-shadow: 1px 1px 6px 0px #00000040 inset;
+        width: 310px;
+        height: 50px;
+        color: #fff;
+        border: none;
+        border-radius: 10px;
+        margin-top: 44px;
+    }
+    
+    .right_side {
+        display: flex;
+        justify-content: space-between;
+    }
+    .title {
+        display: flex;
+        width: 457px;
+        justify-content: space-between;
+
+
+        p {
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 32px;
+            line-height: 100%;
+            letter-spacing: 0%;
+
+        }
+    }
+    .rate {
+        display: flex;
+        gap: 3px;
+        
+        .rating{
+          position: relative;
+          width: 25px;
+          height: 24px;
+        
+        
+          &::after {
+            content: '';
+            background-image: url('../../assets/star.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            margin-top: 0px;
+            display: block;
+            }
+          }
+        }
+
+        .description {
+
+            p{     
+                // margin: 65px 75px 65px 75px;
+                padding: 0px 75px 75px 75px;
+                font-family: Montserrat;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                letter-spacing: 0%;
+
+            }
+        }
+
+        .first_lay {
+            display: flex;
+            justify-content: space-around;
+
+            .point {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .duration {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+                // .desc{
+                //     display: flex;
+                //     flex-direction: column;
+                // }
+            }
+
+            .level {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+
+            }
+       
+        }
+
+        .desc{
+            display: flex;
+            flex-direction: column;
+
+            p {
+                padding: 10px 0px 10px 0px;
+            }
+        }
+    
