@@ -35,6 +35,7 @@ export interface CardItem {
   camp: boolean;
   tours_img: string;
   collection_point: string;
+  allowed_age: number;
 }
 export const mockData: CardItem[] = [
   {
@@ -50,7 +51,8 @@ export const mockData: CardItem[] = [
     level : 'easy tour',
     camp: true,
     gid : false,
-    tours_img: tour_img
+    tours_img: tour_img,
+    allowed_age: 16
   },
   {
     id: 2,
@@ -59,6 +61,7 @@ export const mockData: CardItem[] = [
     collection_point: 'Manas str. 42',
     rating: 4.8,
     price: 15000,
+       allowed_age: 16,
     duration: 2,
     date: '10.07.2025',
     place: 3,
@@ -70,6 +73,7 @@ export const mockData: CardItem[] = [
   {
     id: 3,
     image: image2,
+       allowed_age: 10,
     collection_point: 'Manas str. 42',
     title: 'Арсланбоб',
     rating: 4.2,
@@ -85,6 +89,7 @@ export const mockData: CardItem[] = [
   {
     id: 4,
     image: image2,
+           allowed_age: 16,
     title: 'Арсланбоб',
     rating: 4.2,
     price: 18000,
@@ -103,6 +108,7 @@ export const mockData: CardItem[] = [
     title: ' Арсланбоб',
     rating: 4.2,
     price: 18000,
+           allowed_age: 11,
     collection_point: 'Manas str. 42',
     duration: 5,
     date: '20.07.2025',
@@ -118,6 +124,7 @@ export const mockData: CardItem[] = [
     title: ' Арсланбоб',
     rating: 4.2,
     price: 18000,
+           allowed_age: 24,
     duration: 5,
     collection_point: 'Manas str. 42',
     date: '20.07.2025',
@@ -133,6 +140,7 @@ export const mockData: CardItem[] = [
     title: ' Арсланбоб',
     collection_point: 'Manas str. 42',
     rating: 4.2,
+           allowed_age: 20,
     price: 18000,
     duration: 9,
         level : 'medium',
@@ -150,6 +158,7 @@ export const mockData: CardItem[] = [
     rating: 4.2,
     collection_point: 'Manas str. 42',
     price: 18000,
+           allowed_age: 16,
     duration: 1 ,
     date: '20.07.2025',
     place: 8,  
@@ -163,6 +172,7 @@ export const mockData: CardItem[] = [
     image: image2,
     title: 'test2',
     rating: 4.2,
+           allowed_age: 18,
     price: 18000,
     duration: 1 ,
     date: '20.07.2025',
