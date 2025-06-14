@@ -7,6 +7,10 @@ import icon2 from '../../assets/icons.svg';
 // import icon2 from '../../assets/icons2.png';
 import icon from '../../assets/icons2.svg';
 import Level from '../../assets/Level.svg';
+import price from '../../assets/Group.svg';
+import age from '../../assets/people.svg';
+import group from '../../assets/peopleGroup.svg';
+
 
 function ToursDetail() {
   const { id } = useParams()
@@ -87,28 +91,29 @@ function ToursDetail() {
                     </div>
                 </div>         
             </div>
+
             <div className={styles.second_lay}>
-                    <div className={styles.point}>
-                    <img src={icon}/>
+                    <div className={styles.price}>
+                    <img src={price}/>
                     <div className={styles.desc}>
-                        <p>Точка сбора:</p>
-                        <p>{tour.collection_point}</p>
+                        <p>Price:</p>
+                        <p>{tour.price}</p>
                     </div>
                 </div>
 
                 <div className={styles.duration}>
-                   <img src={icon2}/>
+                   <img src={age}/>
                    <div className={styles.desc}>
-                        <p>Длительность:</p>
-                        <p>{tour.duration}</p>
+                        <p>allowed age:</p>
+                        <p>{tour.allowed_age}</p>
                    </div>    
                 </div>
 
                 <div className={styles.level}>
-                    <img src={Level}/>
+                    <img src={group}/>
                     <div className={styles.desc}>
-                        <p>Сложность:</p>
-                        <p>{tour.level}</p>
+                        <p>group:</p>
+                        <p>{tour.group}</p>
                     </div>
                 </div>     
             </div>
