@@ -33,6 +33,7 @@ export interface CardItem {
   level: string;
   gid: boolean;
   camp: boolean;
+  group: number;
   tours_img: string;
   collection_point: string;
   allowed_age: number;
@@ -40,6 +41,7 @@ export interface CardItem {
 export const mockData: CardItem[] = [
   {
     id: 1,
+    group: 14,
     image: image,
     title: 'ArslanBob',
     rating: 4.5,
@@ -57,6 +59,7 @@ export const mockData: CardItem[] = [
   {
     id: 2,
     image: image2,
+     group: 14,
     title: 'Иссык-Куль',
     collection_point: 'Manas str. 42',
     rating: 4.8,
@@ -72,6 +75,7 @@ export const mockData: CardItem[] = [
   },
   {
     id: 3,
+     group: 14,
     image: image2,
        allowed_age: 10,
     collection_point: 'Manas str. 42',
@@ -94,6 +98,7 @@ export const mockData: CardItem[] = [
     rating: 4.2,
     price: 18000,
     camp: true,
+     group: 14,
     gid : false,
     duration: 5,
     collection_point: 'Manas str. 42',
@@ -105,6 +110,7 @@ export const mockData: CardItem[] = [
   {
     id: 5,
     image: image2,
+     group: 14,
     title: ' Арсланбоб',
     rating: 4.2,
     price: 18000,
@@ -124,6 +130,7 @@ export const mockData: CardItem[] = [
     title: ' Арсланбоб',
     rating: 4.2,
     price: 18000,
+     group: 14,
            allowed_age: 24,
     duration: 5,
     collection_point: 'Manas str. 42',
@@ -138,6 +145,7 @@ export const mockData: CardItem[] = [
     id: 7,
     image: image2,
     title: ' Арсланбоб',
+     group: 14,
     collection_point: 'Manas str. 42',
     rating: 4.2,
            allowed_age: 20,
@@ -160,6 +168,7 @@ export const mockData: CardItem[] = [
     price: 18000,
            allowed_age: 16,
     duration: 1 ,
+     group: 14,
     date: '20.07.2025',
     place: 8,  
       level : 'medium',
@@ -171,6 +180,7 @@ export const mockData: CardItem[] = [
     id: 9,
     image: image2,
     title: 'test2',
+     group: 14,
     rating: 4.2,
            allowed_age: 18,
     price: 18000,

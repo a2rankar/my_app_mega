@@ -96,7 +96,7 @@ letter-spacing: 0%;
 
             p{     
                 // margin: 65px 75px 65px 75px;
-                padding: 0px 75px 75px 75px;
+                padding: 0px 75px 0px 75px;
                 font-family: Montserrat;
                 font-weight: 400;
                 font-size: 16px;
@@ -109,9 +109,12 @@ letter-spacing: 0%;
         .first_lay {
             display: flex;
             justify-content: space-around;
+            align-items: center;
+            text-align: center;
 
             .point {
                 display: flex;
+                text-align: center;
                 align-items: center;
                 gap: 16px;
             }
@@ -144,4 +147,43 @@ letter-spacing: 0%;
                 padding: 10px 0px 10px 0px;
             }
         }
-    
+    .second_lay {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding-top: 34px;
+
+        .price {
+            display: flex;
+          
+            align-items: center;
+            text-align: center;
+            gap: 16px;
+        }
+        .allowed_age {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+
+        .group {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+    }
+    .icons {
+        padding: 64px;
+        
+    }
+
+    // img {
+    //     height: 80px;
+    //     width: 80px;
+    // }
+    .comment {
+       display: flex;
+
+
+    }

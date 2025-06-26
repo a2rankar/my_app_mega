@@ -7,9 +7,11 @@ import icon2 from '../../assets/icons.svg';
 // import icon2 from '../../assets/icons2.png';
 import icon from '../../assets/icons2.svg';
 import Level from '../../assets/Level.svg';
-import price from '../../assets/Group.svg';
+import price from '../../assets/price.svg';
 import age from '../../assets/people.svg';
 import group from '../../assets/peopleGroup.svg';
+import Comment from '../../components/Comments/Comment';
+import Footer from '../../components/Footer/Footer';
 
 
 function ToursDetail() {
@@ -101,7 +103,7 @@ function ToursDetail() {
                     </div>
                 </div>
 
-                <div className={styles.duration}>
+                <div className={styles.allowed_age}>
                    <img src={age}/>
                    <div className={styles.desc}>
                         <p>allowed age:</p>
@@ -109,7 +111,7 @@ function ToursDetail() {
                    </div>    
                 </div>
 
-                <div className={styles.level}>
+                <div className={styles.group}>
                     <img src={group}/>
                     <div className={styles.desc}>
                         <p>group:</p>
@@ -118,6 +120,14 @@ function ToursDetail() {
                 </div>     
             </div>
         </div>  
+        <div className={styles.comment}>
+
+        
+        <Comment/>
+        </div>
+        <div className={styles.footer}>
+            <Footer/>
+        </div>
     </div>
   )
 }
