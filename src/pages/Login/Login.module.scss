@@ -57,10 +57,9 @@ vertical-align: middle;
     background: #F7F8FA;
     border: none;
     box-shadow: 1px 1px 6px 0px #00000040 inset;
-
-  width: 360px;
-  height: 50px;
-  border-radius: 10px;
+    width: 360px;
+    height: 50px;
+    border-radius: 10px;
 
     &::placeholder{
         padding-left: 10px;
@@ -156,6 +155,7 @@ border: none;
         height: 50px;
         border-radius: 10px;
         border: none;
+        padding: 0px!important;
     }
     .authOptions {
         display: flex;
@@ -177,3 +177,28 @@ border: none;
         align-items: center;
         padding: 50px;
     }
+ .tgNumber {
+    width: 255px!important;
+    padding-left: 48px !important;
+
+};
+.countryCode {
+    width: 90px;
+    height: 50px;
+        border-radius: 10px;
+        border: none;
+  border: 1px solid #ccc;
+  background: white;
+}
+.phoneWrapper {
+    display: flex;
+    gap: 10px;
+}
+ .next {
+    width: 360px;
+    height: 50px;
+    background: none;
+    border-radius: 10px;
+    border: 1px solid #3DD0C9
+
+}

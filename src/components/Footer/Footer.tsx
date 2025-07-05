@@ -10,10 +10,11 @@ const Footer : React.FC = () => {
     return (
         <div className={styles.container}>
             <div className={styles.card}>
-                <div className={styles.toLeft}>
-                    <div className={styles.logo}>
+                      <div className={styles.logo}>
                         <p>LOGO</p>
                     </div>
+                <div className={styles.toLeft}>
+              
                     <div className={styles.puncts}>
                         <p>Главная</p>
                         <p>О компании</p>
