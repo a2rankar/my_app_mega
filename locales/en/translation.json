@@ -1,0 +1,19 @@
+{
+  "login": "Login",
+  "password": "Password",
+  "welcome": "Welcome",
+
+  "header": {
+    "home": "Home",
+    "tours": "Tours",
+    "contacts": "Contacts"
+  },
+
+  "book": "Book",
+  "days": "days",
+  "left_places": "Left places"
+
+
+
+
+}

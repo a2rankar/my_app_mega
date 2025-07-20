@@ -1,0 +1,37 @@
+.tabList {
+  display: flex;
+  justify-content: space-around;
+}
+.tabContent {
+  display: flex;
+  border: none;
+}
+.tabWrapper {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.tabWrapper button {
+  flex: 1;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-weight: 500;
+  color: #666;
+  transition: color 0.3s;
+}
+
+.activeTab {
+  color: #000;
+}
+
+.activeLine {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background-color: #000;
+  transition: all 0.3s ease;
+}

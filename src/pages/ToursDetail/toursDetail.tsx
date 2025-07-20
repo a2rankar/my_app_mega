@@ -1,22 +1,24 @@
 import { useParams } from 'react-router-dom';
-import { mockData } from '../../api/data/cardData';
+import { useCardData } from '../../api/data/cardData';
+import { TourApiInterface } from '../../api/data/cardData';
 import styles from './toursDetail.module.scss';
 import Header from '../../components/Header/Header';
 import {ReactCalendar} from '../../components/Calendar/React_Calendar';
 import icon2 from '../../assets/icons.svg';
 // import icon2 from '../../assets/icons2.png';
-import icon from '../../assets/icons2.svg';
-import Level from '../../assets/Level.svg';
-import price from '../../assets/price.svg';
-import age from '../../assets/people.svg';
-import group from '../../assets/peopleGroup.svg';
+// import icon from '../../assets/icons2.svg';
+// import Level from '../../assets/Level.svg';
+// import price from '../../assets/price.svg';
+// import age from '../../assets/people.svg';
+// import group from '../../assets/peopleGroup.svg';
 import Comment from '../../components/Comments/Comment';
 import Footer from '../../components/Footer/Footer';
 
 
 function ToursDetail() {
   const { id } = useParams()
-  const tour = mockData.find((t) => t.id === Number(id));
+  const tours = useCardData()
+  const tour  = tours.find((t) => t.id === Number(id));
 
   if (!tour) return
       <div>Tour wasnt found</div>
@@ -28,7 +30,7 @@ function ToursDetail() {
   return (
     <div className={styles.container}>
         <div className={styles.imgHover}
-            style={{backgroundImage: `url(${tour.tours_img})`}}>
+            style={{backgroundImage: `url(${tour.image})`}}>
                 <div className={styles.header}>
                     <Header/>
                 </div>
@@ -107,7 +109,7 @@ function ToursDetail() {
                    <img src={age}/>
                    <div className={styles.desc}>
                         <p>allowed age:</p>
-                        <p>{tour.allowed_age}</p>
+                        {/* <p>{tour.allowed_age}</p> */}
                    </div>    
                 </div>
 
@@ -115,7 +117,7 @@ function ToursDetail() {
                     <img src={group}/>
                     <div className={styles.desc}>
                         <p>group:</p>
-                        <p>{tour.group}</p>
+                        {/* <p>{tour.group}</p> */}
                     </div>
                 </div>     
             </div>
