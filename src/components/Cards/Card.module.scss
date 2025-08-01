@@ -10,62 +10,58 @@
 }
 
 .container {
-  border: 1px solid #ddd;
+  border-radius: 20px;
   text-align: center;
   width: 308px;
   height: 437px;
-  border: none;
-    
-
 
   .imgHover {
     position: relative;
     width: 100%;
     overflow: hidden;
-  
+    border-radius: 10px;
+
     img {
       width: 100%;
       display: block;
-      position: relative; // Добавлено
+      position: relative;
       z-index: 1;
     }
-  
+
     .hoverOverlay {
       position: absolute;
       left: 0;
       bottom: 0;
       width: 100%;
-      height: 55px; // Меняем на весь размер, не только 55px
-      background-color:#FFFFFFCC;
+      height: 55px;
+      background-color: #ffffffcc;
       z-index: 2;
       display: flex;
       justify-content: center;
       align-items: center;
       opacity: 0;
-      transition: opacity 0.3s ease, transform 0.3s ease;
+      transition:
+        opacity 0.3s ease,
+        transform 0.3s ease;
       transform: translateY(20px);
       cursor: pointer;
     }
-  
+
     &:hover .hoverOverlay {
       opacity: 1;
       transform: translateY(0);
     }
-  
-    .book {
 
+    .book {
       color: rgb(0, 0, 0);
       font-size: 18px;
       padding: 12px 24px;
       border-radius: 8px;
       text-decoration: none;
-      
+
       transition: background-color 0.2s ease;
-  
     }
   }
-  
-  
 
   .description {
     display: flex;
@@ -80,34 +76,31 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-
   }
 
   .paragraf {
     text-align: left;
     font-size: 16px;
-
   }
 }
 .rate {
-display: flex;
-gap: 3px;
+  display: flex;
+  gap: 3px;
 
-.rating{
-  position: relative;
-  width: 25px;
-  height: 24px;
-
-
-  &::after {
-    content: '';
-    background-image: url('../../assets/star.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 24px;
+  .rating {
+    position: relative;
+    width: 25px;
     height: 24px;
-    margin-top: -2px;
-    display: block;
+
+    &::after {
+      content: '';
+      background-image: url('../../assets/star.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 24px;
+      height: 24px;
+      margin-top: -2px;
+      display: block;
     }
   }
 }

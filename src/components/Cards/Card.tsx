@@ -15,7 +15,12 @@ const Card: React.FC<CardProps> = ({ data }) => {
       {data.map((card) => (
         <div className={styles.container} key={card.id}>
           <div className={styles.imgHover}>
-            <img src={card.image} alt="logo" />
+            <img
+              src={
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Q9gpzG1K4xDWCvVMtwaco6vDVt4Xk5zcOA&s'
+              }
+              alt="logo"
+            />
             <div className={styles.hoverOverlay}>
               <Link to={`/tours/${card.id}`} className={styles.book}>
                 {t('book')}
@@ -26,7 +31,7 @@ const Card: React.FC<CardProps> = ({ data }) => {
             <div className={styles.first_row}>
               <p>{card.title}</p>
               <div className={styles.rate}>
-                <p>{card.rating}</p>
+                <p>{card.average_rating}</p>
                 <div className={styles.rating}></div>
               </div>
             </div>

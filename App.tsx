@@ -9,6 +9,7 @@ import LoginModal from './src/pages/Login/Login'
 import Registration from './src/pages/Registration/Registration'
 import Tour from './src/pages/Tours/Tour'
 import ToursDetail from './src/pages/ToursDetail/toursDetail'
+import { TheBestTours } from './src/components/TheBest'
 import Comment from './src/components/Gids/Gids'
 import Profile from './src/pages/Profile/Profile'
 import GeneralInfo from './src/components/GeneralInfoPage/GeneralInfo'
@@ -30,6 +31,7 @@ const App = () => {
         <Route path="/tour/:id" element={<ToursDetail />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/registration" element={<Registration />} />
+        <Route path="/thebest" element={<TheBestTours />} />
       </Routes>
       {location.pathname === '/login' && <LoginModal />}
     </>

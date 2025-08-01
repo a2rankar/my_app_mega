@@ -1,69 +1,67 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react'
+import axios from 'axios'
 // import image from '../../assets/Image2.svg';
 // import image2 from '../../assets/image4.svg';
 // import tour_img from '../../assets/tours_image.svg';
 
 export interface TourApiInterface {
-  id: number;
-  image: string;
-  title: string;
-  rating: number;
-  description: string;
-  duration: number;
-  price: number;
-  collection_point: string;
-  start_date: string;
-  level: string;
-  avarage_rating: number;
-  departures: any[];
-  author: string;
-  place: number | string;
+  id: number
+  image: string
+  title: string
+  average_rating: number
+  description: string
+  duration: string
+  data: string
+  price: number
+  collection_point: string
+  start_date: string
+
+  level: string
+  avarage_rating: number
+  departures: any[]
+  author: string
+  place: number | string
 }
 
-
-
 export const useCardData = (): TourApiInterface[] => {
-  const [tours, setTours] = useState<TourApiInterface[]>([]);
+  const [tours, setTours] = useState<TourApiInterface[]>([])
 
   useEffect(() => {
     const fetchTours = async () => {
       try {
-        const response = await axios.get('http://35.225.244.52:8000/api/tour/');
-        const data = response.data;
+        const response = await axios.get('http://35.225.244.52:8000/api/tour/')
+        const data = response.data
 
-        console.log("typeof data:", typeof data);
-        console.log("actual data:", data);
+        console.log('typeof data:', typeof data)
+        console.log('actual data:', data)
 
+        const toursArray = Array.isArray(data) ? data : data.results || []
 
-        const toursArray = Array.isArray(data) ? data : data.results || [];
+        const formatted: TourApiInterface[] = toursArray.map(
+          (tour: any, index: number) => ({
+            id: index + 1,
+            image: tour.image,
+            title: tour.title,
+            rating: tour.rating ?? null,
+            duration: `${tour.duration_days}`,
+            price: tour.price,
+            date: new Date(tour.start_date).toLocaleDateString(),
+            place: tour.collection_point,
+          }),
+        )
 
-        const formatted: TourApiInterface[] = toursArray.map((tour: any, index: number) => ({
-          id: index + 1,
-          image: tour.image,
-          title: tour.title,
-          rating: tour.rating ?? null,
-          duration: `${tour.duration_days}`,
-          price: tour.price,
-          date: new Date(tour.start_date).toLocaleDateString(),
-          place: tour.collection_point,
-        }));
-
-        setTours(formatted);
-
+        setTours(formatted)
       } catch (error) {
-        console.error("Error fetching tour data:", error);
+        console.error('Error fetching tour data:', error)
       }
-    };
+    }
 
-    fetchTours();
-  }, []);
+    fetchTours()
+  }, [])
 
-  return tours;
-};
+  return tours
+}
 
-
- 
 // export interface CardItem {
 //   id: number;
 //   image: string;
@@ -127,7 +125,7 @@ export const useCardData = (): TourApiInterface[] => {
 //     price: 18000,
 //     duration: 5,
 //     date: '20.07.2025',
-//     place: 1,  
+//     place: 1,
 //       level : 'easy tour',
 //       camp: true,
 //       gid : false,
@@ -146,7 +144,7 @@ export const useCardData = (): TourApiInterface[] => {
 //     duration: 5,
 //     collection_point: 'Manas str. 42',
 //     date: '20.07.2025',
-//     place: 4,  
+//     place: 4,
 //       level : 'easy tour',
 //       tours_img: tour_img
 //   },
@@ -161,7 +159,7 @@ export const useCardData = (): TourApiInterface[] => {
 //     collection_point: 'Manas str. 42',
 //     duration: 5,
 //     date: '20.07.2025',
-//     place: 12,  
+//     place: 12,
 //       level : 'easy tour',
 //       camp: true,
 //       gid : false,
@@ -178,7 +176,7 @@ export const useCardData = (): TourApiInterface[] => {
 //     duration: 5,
 //     collection_point: 'Manas str. 42',
 //     date: '20.07.2025',
-//     place: 2,  
+//     place: 2,
 //       level : 'easy tour',
 //       camp: true,
 //       gid : false,
@@ -196,7 +194,7 @@ export const useCardData = (): TourApiInterface[] => {
 //     duration: 9,
 //         level : 'medium',
 //     date: '20.07.2025',
-//     place: 9,  
+//     place: 9,
 //       camp: true,
 //     gid : false,
 //     tours_img: tour_img
@@ -213,7 +211,7 @@ export const useCardData = (): TourApiInterface[] => {
 //     duration: 1 ,
 //      group: 14,
 //     date: '20.07.2025',
-//     place: 8,  
+//     place: 8,
 //       level : 'medium',
 //       camp: true,
 //       gid : false,
@@ -229,7 +227,7 @@ export const useCardData = (): TourApiInterface[] => {
 //     price: 18000,
 //     duration: 1 ,
 //     date: '20.07.2025',
-//     place: 8,  
+//     place: 8,
 //     collection_point: 'Manas str. 42',
 //       level : 'difficult',
 //       camp: true,
