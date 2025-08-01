@@ -16,13 +16,19 @@ export const getUserById = async (id: number): Promise<User> => {
     throw error
   }
 }
-export const getUserByEmail = async (email: string): Promise<User> => {
+export const getUserByEmail = async (
+  email: string,
+  token: string,
+): Promise<User> => {
   try {
     const res = await axios.post(
       `${BASE_URL}/register-with-email/`,
       { email },
-      { withCredentials: true },
+      {
+        withCredentials: true,
+      },
     )
+
     return res.data
   } catch (error) {
     console.error('Ошибка при получении профиля:', error)

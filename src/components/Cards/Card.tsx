@@ -5,11 +5,12 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 interface CardProps {
   data: TourApiInterface[]
+  limit?: number
 }
 
-const Card: React.FC<CardProps> = ({ data }) => {
+const Card: React.FC<CardProps> = ({ data, limit = 6 }) => {
   const { t } = useTranslation()
-
+  // const displayedData = data.slice(0, limit)
   return (
     <div className={styles.fullBlog}>
       {data.map((card) => (
