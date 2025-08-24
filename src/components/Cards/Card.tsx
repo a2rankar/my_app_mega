@@ -41,7 +41,7 @@ const Card: React.FC<CardProps> = ({ data, limit = 6 }) => {
                 {card.duration} {t('days')}
               </p>
               <p>{card.price}</p>
-              <p>{card.date}</p>
+              {/* <p>{card.date}</p> */}
               <p>
                 {t('left_places')}: {card.place}
               </p>

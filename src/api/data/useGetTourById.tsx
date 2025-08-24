@@ -5,7 +5,7 @@ import { TourApiInterface } from './cardData'
 export const useTourById = (id: string | undefined) => {
   const [tour, setTour] = useState<TourApiInterface | null>(null)
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null) 
 
   useEffect(() => {
     if (!id) return
@@ -25,15 +25,18 @@ export const useTourById = (id: string | undefined) => {
           average_rating: tourData.rating ?? null,
           duration: `${tourData.duration_days}`,
           price: tourData.price,
-          date: new Date(tourData.start_date).toLocaleDateString(),
-          place: tourData.collection_point,
-          level: tourData.level,
           collection_point: tourData.collection_point,
+          start_date: tourData.start_date,
+          level: tourData.level,
+          description: tourData.description,
+          departures: tourData.departures,
+          author: tourData.author,
+          place: tourData.place,
         }
 
         setTour(formatted)
       } catch (err: any) {
-        setError(err)
+        setError(err.message || 'Ошибка при загрузке данных')
       } finally {
         setLoading(false)
       }

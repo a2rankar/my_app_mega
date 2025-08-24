@@ -73,22 +73,24 @@ const Header: React.FC = () => {
         />
       </div>
 
-      {isOpen && isAuthenticated && (
-        <div className={styles.dropdown}>
-          <Link to={`/profile/${userId}`} className={styles.dropdownItem}>
-            Профиль
-          </Link>
-          <Link to="/my-tours" className={styles.dropdownItem}>
-            Мои туры
-          </Link>
-          <Link to="/favorites" className={styles.dropdownItem}>
-            Избранное
-          </Link>
-          <button onClick={handleLogout} className={styles.dropdownItem}>
-            Выйти
-          </button>
-        </div>
-      )}
+      <div className={`${styles.dropdown} ${isOpen ? styles.show : ''}`}>
+        {isAuthenticated && (
+          <div className={styles.dropdownScope}>
+            <Link to={`/profile/${userId}`} className={styles.dropdownItem}>
+              Профиль
+            </Link>
+            <Link to="/my-tours" className={styles.dropdownItem}>
+              Мои туры
+            </Link>
+            <Link to="/favorites" className={styles.dropdownItem}>
+              Избранное
+            </Link>
+            <button onClick={handleLogout} className={styles.dropdownItem}>
+              Выйти
+            </button>
+          </div>
+        )}
+      </div>
 
       <div className={styles.search}>
         <div className={styles.input_search}>
