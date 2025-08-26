@@ -32,12 +32,12 @@ const EmailLoginForm = ({ onOpenRegister }: Props) => {
 
   const onSubmit = async (data: FormFields) => {
     try {
-      // стартуем флоу входа по email (твой бэк на /auth-with-email/ может прислать accessToken)
-      const res = await getUserByEmail(data.email)
-
-      // если бэк возвращает accessToken — кладём его в память для Bearer
-      if (res?.accessToken) {
-        setAccessToken(res.accessToken)
+      const res = await getUserByEmail(data.email, data.password)
+      console.log('Ответ от бэка:', res)
+      if (res?.access_token && res?.refresh_token) {
+        setAccessToken(res.access_token)
+        localStorage.setItem('accessToken', res.access_token as string)
+        localStorage.setItem('refreshToken', res.refresh_token as string)
       }
 
       if (data.rememberMe) {
@@ -55,20 +55,17 @@ const EmailLoginForm = ({ onOpenRegister }: Props) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <h2>Email Login</h2>
-
       <input
         {...register('email', { required: 'Email обязателен' })}
         placeholder="Email"
       />
       {errors.email && <p>{errors.email.message}</p>}
-
       <input
         {...register('password', { required: 'Пароль обязателен' })}
         type="password"
         placeholder="Пароль"
       />
       {errors.password && <p>{errors.password.message}</p>}
-
       <div className={styles.checkboxContainer}>
         <label className={styles.checkboxLabel}>
           <input
@@ -79,7 +76,6 @@ const EmailLoginForm = ({ onOpenRegister }: Props) => {
           Запомнить меня
         </label>
       </div>
-
       <div>
         <a
           href="/forgot-password"
@@ -88,7 +84,6 @@ const EmailLoginForm = ({ onOpenRegister }: Props) => {
           Забыли пароль?
         </a>
       </div>
-
       <div className={styles.btns}>
         <button className={styles.login_btn} type="submit">
           Войти

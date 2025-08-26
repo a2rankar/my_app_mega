@@ -1,14 +1,20 @@
 import { api } from '../axiosInstance'
 import { User } from '../../types/types'
-
+import { AuthResponse } from '../../types/types'
 export const getUserById = async (id: number): Promise<User> => {
   const res = await api.get(`/api/user/${id}/`, { timeout: 10000 })
   localStorage.setItem('userId', res.data.id)
   return res.data
 }
 
-export const getUserByEmail = async (email: string): Promise<User> => {
-  const res = await api.post('user/auth-with-email/', { email })
+export const getUserByEmail = async (
+  email: string,
+  password: string,
+): Promise<AuthResponse> => {
+  const res = await api.post<AuthResponse>('user/auth-with-email/', {
+    identifier: email,
+    password,
+  })
   return res.data
 }
 

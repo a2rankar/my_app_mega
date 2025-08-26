@@ -38,32 +38,75 @@
       margin: 0%;
     }
 
+    // .left {
+    //   background-color: #40d885;
+    //   border-top-left-radius: 20px;
+    //   border-bottom-left-radius: 20px;
+    //   border-top-right-radius: 0;
+    //   border-bottom-right-radius: 0;
+    //   color: #fff;
+    //   transition:
+    //     background-color 0.3s ease,
+    //     transform 0.2s ease;
+
+    //   &:hover {
+    //     background-color: #6cc758;
+    //     transform: scale(1.03);
+    //   }
+    // }
+
+    // .right {
+    //   background-color: transparent;
+    //   border-top-left-radius: 0;
+    //   border-bottom-left-radius: 0;
+    //   border-top-right-radius: 20px;
+    //   border-bottom-right-radius: 20px;
+    //   color: #000;
+    //   &:hover {
+    //     background-color: #a59d9d31;
+    //   }
+    // }
+    // button {
+    //   font-weight: 600;
+    //   font-size: 16px;
+    //   width: 50%;
+    //   height: 100%;
+    //   border: none;
+    //   cursor: pointer;
+    //   margin: 0;
+    //   transition:
+    //     background-color 0.3s ease,
+    //     transform 0.2s ease;
+
+    // }
+
     .left {
-      background-color: #40d885;
-      border-top-left-radius: 20px;
+      border-top-left-radius: 20px !important;
+      border-bottom-left-radius: 20px !important;
+      background-color: transparent;
+      color: #0c0404;
       border-bottom-left-radius: 20px;
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-      color: #fff;
       transition:
         background-color 0.3s ease,
         transform 0.2s ease;
 
-      &:hover {
-        background-color: #6cc758;
-        transform: scale(1.03);
+      &.active {
+        background-color: #40d885;
+        color: #fff;
       }
     }
 
     .right {
-      background-color: transparent;
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
       border-top-right-radius: 20px;
       border-bottom-right-radius: 20px;
-      color: #000;
-      &:hover {
-        background-color: #a59d9d31;
+      background-color: transparent;
+      color: #0c0404;
+      transition:
+        background-color 0.3s ease,
+        transform 0.2s ease;
+      &.active {
+        background-color: #40d885;
+        color: #fff;
       }
     }
   }

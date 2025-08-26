@@ -30,7 +30,7 @@ const Home: React.FC = () => {
       <div className={styles.content}>
         <div className={styles.content_page}>
           <button
-            className={styles.left}
+            className={`${styles.left} ${showBest ? styles.active : ''}`}
             onClick={() => {
               setShowBest(true)
               setShowAllCards(false)
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
             best
           </button>
           <button
-            className={styles.right}
+            className={`${styles.right} ${!showBest ? styles.active : ''}`}
             onClick={() => {
               setShowBest(false)
               setShowAllCards(false)

@@ -167,3 +167,8 @@
     cursor: pointer;
   }
 }
+.main img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain; // или cover, если нужно обрезать
+}

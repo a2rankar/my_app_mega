@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const BASE_URL = 'http://35.225.244.52:8000'
+const BASE_URL = 'http://35.225.244.52:8000/'
 
 let accessToken: string | null = null
 export const setAccessToken = (token: string | null) => {
@@ -19,7 +19,6 @@ api.interceptors.request.use((config) => {
   return config
 })
 
-// опционально: обработка 401 с авто-refresh
 api.interceptors.response.use(
   (res) => res,
   async (err) => {

@@ -6,7 +6,7 @@ import menu_panel from '../../assets/bi_people-circle.svg'
 import arrow from '../../assets/arrow down.svg'
 import search from '../../assets/search.png'
 import Switcher from './Switcher/Switcher'
-
+import main from '../../assets/main_logo.svg'
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isAuthenticated, setIsAuthenticated] = useState(false)
@@ -36,8 +36,8 @@ const Header: React.FC = () => {
       className={`${styles.container} ${location.pathname.startsWith('/tours') ? styles.back : ''}`}
     >
       <div className={styles.hd_puncts}>
-        <Link to="/" className={styles.link}>
-          <p>LOGO</p>
+        <Link to="/" className={styles.main}>
+          <img src={main} />
         </Link>
         <Link to="/" className={styles.link}>
           <p>{t('header.home')}</p>
@@ -63,16 +63,17 @@ const Header: React.FC = () => {
         }}
       >
         <img src={menu_panel} />
-        <img
-          src={arrow}
+        <div
           style={{
             transform: isOpen ? 'rotate(90deg)' : 'rotate(0deg)',
             transition: 'transform 0.2s',
             marginLeft: '8px',
+            display: 'inline-block',
           }}
-        />
+        >
+          <img src={arrow} alt="arrow" />
+        </div>
       </div>
-
       <div className={`${styles.dropdown} ${isOpen ? styles.show : ''}`}>
         {isAuthenticated && (
           <div className={styles.dropdownScope}>

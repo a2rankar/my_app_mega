@@ -13,6 +13,7 @@ import { TheBestTours } from './src/components/TheBest'
 import Comment from './src/components/Gids/Gids'
 import Profile from './src/pages/Profile/Profile'
 import GeneralInfo from './src/components/GeneralInfoPage/GeneralInfo'
+import Favorite from './src/pages/Favorite/Favorite'
 import './i18n'
 import './App.css'
 
@@ -32,6 +33,7 @@ const App = () => {
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/thebest" element={<TheBestTours />} />
+        <Route path="/favorite" element={<Favorite />} />
       </Routes>
       {location.pathname === '/login' && <LoginModal />}
     </>

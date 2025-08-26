@@ -18,10 +18,9 @@ import Footer from '../../components/Footer/Footer'
 
 function ToursDetail() {
   const { id } = useParams()
-  const { tour, isloading } = useTourById(id)
-  if (isloading) return <div>Loading ....</div>
-  if (!tour) return
-  ;<div>Tour wasnt found</div>
+  const { tour, isLoading } = useTourById(id)
+  if (isLoading) return <div>Loading ....</div>
+  if (!tour) return <div>Tour wasnt found</div>
 
   return (
     <div className={styles.container}>
@@ -138,9 +137,7 @@ function ToursDetail() {
       <div className={styles.comment}>
         <Comment />
       </div>
-      <div className={styles.footer}>
-        <Footer />
-      </div>
+      <Footer />
     </div>
   )
 }
